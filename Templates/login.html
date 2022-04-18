@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="pindex/" method="post">
+        {% csrf_token %}
+    <div class="container">
+        <div class="overlay-contact footer-part footer-part-form">
+            <div class="map-head">
+                <h2>Register</h2> <span class="footer-ser-re">Please fill the information below correctly</span> </div>
+                <!-- <h2>Login</h2> <span class="footer-ser-re">To access your student portal</span> </div>
+             ENQUIRY FORM -->
+            <form id="contact_form" name="login" aaction="/pindex" method="post">
+                <ul>
+                    <li class="col-md-12 col-sm-12 col-xs-12 contact-input-spac">
+                        <label for ='first_name'><b>First Name : </b></label>
+                        <input type="text" placeholder="Enter first name" name="first_name" Required></li>
+                    <li class="col-md-12 col-sm-12 col-xs-12 contact-input-spac">
+                        <label for ='middle_name'><b>Middle Name : </b></label>
+                        <input type="text" placeholder="Enter middle name" name="middle_name"></li>
+                    <li class="col-md-12 col-sm-12 col-xs-12 contact-input-spac">
+                        <label for ='last_name'><b>Last Name : </b></label>
+                        <input type="text" placeholder="Enter last name" name="last_name" Required></li>
+                    <li class="col-md-12 col-sm-12 col-xs-12 contact-input-spac">
+                        <label for ='date_birth'><b>Date of birth : </b></label>
+                        <input type="date" name="date_birth" Required></li>
+                    <li class="col-md-12 col-sm-12 col-xs-12 contact-input-spac">
+                        <label for ='phone'><b>Phone Number : </b></label>
+                        <input type="text" placeholder="Enter phone number" name="phone" Required></li>
+                    <li class="col-md-12 col-sm-12 col-xs-12 contact-input-spac">
+                        <label for ='email'><b>Email Address: </b></label>
+                        <input type="email" placeholder="Enter email address" name="email" Required></li>
+                    <li class="col-md-12 col-sm-12 col-xs-12 contact-input-spac">
+                        <label for ='street'><b>Street : </b></label>
+                        <input type="text" placeholder="Enter street" name="street" Required></li>
+                    <li class="col-md-12 col-sm-12 col-xs-12 contact-input-spac">
+                        <label for ='zip_code'><b>Zip Code : </b></label>
+                        <input type="text" placeholder="Enter zip code" name="zip_code" Required></li>
+                    <li class="col-md-12 col-sm-12 col-xs-12 contact-input-spac">
+                        <label for ='city'><b>City : </b></label>
+                        <input type="text" placeholder="Enter city" name="city" Required></li>
+                    <li class="col-md-12 col-sm-12 col-xs-12 contact-input-spac">
+                        <label for ='country'><b>Nationality : </b></label>
+                        <input type="text" placeholder="Enter " name="country" Required></li>
+                    <li class="col-md-12 col-sm-12 col-xs-12 contact-input-spac">
+                        <label for ='state'><b>State of Origin: </b></label>
+                        <input type="text" placeholder="Enter phone number" name="state" Required></li>
+                    <li class="col-md-12">
+                        <button type="submit"><b>Access Portal</b></button>
+                        <a href="{% url 'login' %}">Forgot Password?</a>
+                    </li>
+                </ul>
+            </form>
+            
+        </div>
+{% endblock content %}

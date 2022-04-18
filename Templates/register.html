@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="pindex/" method="post">
+        {% csrf_token %}
+    <div class="container">
+        <div class="overlay-contact footer-part footer-part-form">
+            <div class="map-head">
+                <h2>Register</h2> <span class="footer-ser-re">Please fill the information below correctly</span> </div>
+            <!-- ENQUIRY FORM -->
+            <form id="contact_form" name="login" aaction="/pindex" method="post">
+                <ul>
+                    <li class="col-md-12 col-sm-12 col-xs-12 contact-input-spac">
+                        <label for ='student_ID'><b>Student ID : </b></label>
+                        <input type="num" placeholder="Enter Student ID" name="student_ID" Required></li>
+                    <li class="col-md-12 col-sm-12 col-xs-12 contact-input-spac">
+                        <label for ='password'><b>Password : </b></label>
+                        <input type="password" placeholder="Enter password" name="password" Required></li>
+                   <li class="col-md-12">
+                        <button type="submit"><b>Access Portal</b></button>
+                        <a href="{% url 'login' %}">Forgot Password?</a>
+                    </li>
+                    <li class="col-md-1"></li>
+                    <input type="text">    
+                </ul>
+            </form>
+            
+        </div>
+{% endblock content %}
